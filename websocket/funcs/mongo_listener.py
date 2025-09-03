@@ -67,11 +67,7 @@ def watch_properties():
                                 try:
                                     channel_layer = get_channel_layer()
                                     async_to_sync(channel_layer.group_send)(
-                                        group_name,
-                                        {
-                                            "type": "property_update",
-                                            "kbs_socket_info": doc["kbs_socket_info"],
-                                        }
+                                        group_name, doc["kbs_socket_info"]
                                     )
                                 except Exception as e:
                                     logger.debug(f"❌ Error broadcasting: {e}")
