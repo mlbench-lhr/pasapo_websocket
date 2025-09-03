@@ -27,3 +27,5 @@ flask
 pillow
 numpy
 passporteye
+channels
+daphne
