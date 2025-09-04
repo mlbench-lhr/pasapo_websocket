@@ -38,12 +38,13 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pasapo_websocket.settings')
 # Import Django first
 django_asgi_app = get_asgi_application()
 
-# Now import your consumer (after Django setup)
-from websocket.funcs.consumers import PropertyConsumer
+# Now import your consumers (after Django setup)
+from websocket.funcs.consumers import PropertyConsumer, GuestConsumer
 
 # Define WebSocket URL patterns
 websocket_urlpatterns = [
     path('ws/property/<str:property_id>/', PropertyConsumer.as_asgi()),
+    path('ws/guest/<str:guest_id>/', GuestConsumer.as_asgi()),
 ]
 
 # Create the application
