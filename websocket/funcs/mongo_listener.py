@@ -75,8 +75,7 @@ def watch_properties():
                     
     except Exception as e:
         logger.debug(f"❌ Error in watch_properties: {e}")
-        import traceback
-        traceback.logger.debug_exc()
+        
 
 
 def watch_guests():
@@ -152,8 +151,7 @@ def watch_guests():
                     
     except Exception as e:
         logger.debug(f"❌ Error in watch_guests: {e}")
-        import traceback
-        traceback.logger.debug_exc()
+        
 
 
 def start_mongo_listener():
@@ -170,5 +168,4 @@ def start_mongo_listener():
         
     except Exception as e:
         logger.debug(f"❌ Error starting threads: {e}")
-        import traceback
-        traceback.logger.debug_exc()
+        
