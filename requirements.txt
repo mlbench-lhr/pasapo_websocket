@@ -20,12 +20,10 @@ django-webpack-loader
 python-dotenv
 django-apscheduler
 apscheduler
-gunicorn
 pycryptodome
 gunicorn
 flask
 pillow
 numpy
-passporteye
 channels
 daphne
